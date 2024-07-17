@@ -36,7 +36,7 @@ const callback = async (req, res)=>{
         console.log(response);
         res.cookie('access_token', access_token,{maxAge: expires_in *1000});
         res.cookie('refresh_token', refresh_token,{maxAge: expires_in *604800});
-        res.redirect('https://spotify-clone-web-application-front.vercel.app');
+        res.redirect('https://spotify-clone-web-application-front.vercel.app/');
     }
     else{
         res.redirect('/login');
