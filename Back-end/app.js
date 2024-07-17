@@ -27,6 +27,9 @@ app.use('/auth', auth);
 app.use('/user', user);
 
 app.use(authenticatedUser);
+app.get('/', function(req, res){
+    res.send('hello')
+})
 
 
 app.listen(3000, () => {
