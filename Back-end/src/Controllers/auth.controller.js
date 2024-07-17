@@ -6,7 +6,7 @@ const {generateRandomString} = require('../utils/helpers.util');
 const auth = (req, res) => {
     console.log(CLIENT_ID);
     const state = generateRandomString(16);
-    res.cookie(STATE_KEY, state);
+    // res.cookie(STATE_KEY, state);
    
     res.redirect('https://accounts.spotify.com/authorize?'+ queryString.stringify({
         response_type: 'code',
@@ -21,15 +21,16 @@ const auth = (req, res) => {
 const callback = async (req, res)=>{
     const milliSeconds = 1000;
     const one_week = 604800;
-    const {error=null,
-        code=null,
-        state=null} = req.query;
-    const storedState = req.cookies[STATE_KEY];
-    if(error || state === null || state !== storedState){
-        res.redirect('/login');
-    } 
+    // const {error=null,
+    //     code=null,
+    //     state=null} = req.query;
+    // const storedState = req.cookies[STATE_KEY];
+    // if(error || state === null || state !== storedState){
+    //     res.redirect('/login');
+    // } 
+    if (null){}
     else{
-    res.clearCookie(STATE_KEY);
+    // res.clearCookie(STATE_KEY);
     const response = await getToken(code);
     if(response.status == 200){
         const {access_token, refresh_token,expires_in} = response.data;
