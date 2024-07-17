@@ -1,5 +1,5 @@
 const Login = (req,res)=>{
-    res.redirect('http://localhost:5173')
+    res.redirect('https://spotify-clone-web-application-front.vercel.app/')
 }
 
 module.exports = {Login}
