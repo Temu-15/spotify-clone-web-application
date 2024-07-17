@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(`${__dirname}/public`));
 
 app.use(cors({
-    origin: 'https://spotify-clone-web-application-front.vercel.app/',
+    origin: 'https://spotify-clone-web-application-front.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
@@ -27,9 +27,7 @@ app.use('/auth', auth);
 app.use('/user', user);
 
 app.use(authenticatedUser);
-app.get('/', function(req, res){
-    res.send('hello')
-})
+
 
 
 app.listen(3000, () => {
