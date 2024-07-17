@@ -30,7 +30,7 @@ const callback = async (req, res)=>{
     // } 
     if (null){}
     else{
-    // res.clearCookie(STATE_KEY);
+    res.clearCookie(STATE_KEY);
     const response = await getToken(code);
     if(response.status == 200){
         const {access_token, refresh_token,expires_in} = response.data;
