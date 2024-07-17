@@ -1,0 +1,89 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+
+.section {
+    margin-bottom: 35px;
+    padding: 2rem 2rem;
+}
+
+.title {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.section--body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: -16px;
+}
+
+.section--body--item {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.category--item {
+    width: 155px;
+height: 135px;
+
+    
+}
+
+.category--item:before {
+    position: absolute;
+width: 70px;
+height: 24px;
+left: 16px;
+top: 12px;
+}
+
+.category--item a {
+    font-family: 'Circular Std';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+text-decoration: none;
+color: #fff;
+
+}
+
+.category--item a h3 {
+    margin: 0;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.category--item img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: -5px;
+    right: -18px;
+    transform: rotate(25deg);
+    z-index: 0;
+}
+
+.section--body--item.section--body--item--lg.category--item {
+    width: 376px; /* (2 * normal section--item width) + 16px [margin-right: 16px] */
+    height: 220px;
+}
+
+.section--body--item.section--body--item--lg.category--item img {
+    width: 130px;
+    height: 130px;
+}
+
+.section--body--item.section--body--item--lg.category--item a h3 {
+    font-size: 2.5rem;
+}
