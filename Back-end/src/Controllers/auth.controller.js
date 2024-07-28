@@ -6,7 +6,7 @@ const {generateRandomString} = require('../utils/helpers.util');
 const auth = (req, res) => {
     console.log(CLIENT_ID);
     const state = generateRandomString(16);
-    // res.cookie(STATE_KEY, state);
+    res.cookie(STATE_KEY, state);
    
     res.redirect('https://accounts.spotify.com/authorize?'+ queryString.stringify({
         response_type: 'code',
@@ -21,23 +21,30 @@ const auth = (req, res) => {
 const callback = async (req, res)=>{
     const milliSeconds = 1000;
     const one_week = 604800;
-    // const {error=null,
-    //     code=null,
-    //     state=null} = req.query;
-    // const storedState = req.cookies[STATE_KEY];
-    // if(error || state === null || state !== storedState){
-    //     res.redirect('/login');
-    // } 
-    if (null){}
+    const {error=null,
+        code=null,
+        state=null} = req.query;
+    const storedState = req.cookies[STATE_KEY];
+    if(error || state === null || state !== storedState){
+        res.redirect('/login');
+    } 
     else{
     res.clearCookie(STATE_KEY);
     const response = await getToken(code);
     if(response.status == 200){
         const {access_token, refresh_token,expires_in} = response.data;
         console.log(response);
-        res.cookie('access_token', access_token,{maxAge: expires_in *1000});
-        res.cookie('refresh_token', refresh_token,{maxAge: expires_in *604800});
-        res.redirect('https://spotify-clone-web-application-front.vercel.app/');
+        res.cookie('access_token', access_token,{maxAge: expires_in *1000,
+            secure: true,
+            sameSite: 'none',
+            httpOnly: true,
+        });
+        res.cookie('refresh_token', refresh_token,{maxAge: expires_in *604800,
+            secure: true,
+            sameSite: 'none',
+            httpOnly: true,
+        });
+        res.redirect('http://localhost:5173');
     }
     else{
         res.redirect('/login');

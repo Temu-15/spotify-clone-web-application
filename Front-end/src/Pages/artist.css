@@ -1,0 +1,302 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+
+.artist-page {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: 85vh 15vh;
+  overflow: hidden;
+  background: black;
+}
+
+.spotify__body {
+  display: grid;
+  grid-template-columns: 18vw 82vw;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(transparent, rgba(0, 0, 0, 1)); */
+  /* background-color: #121212; */
+}
+
+.body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+}
+
+.body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+.artist-page .navbar {
+}
+
+.artist-top {
+  max-height: 380px;
+  min-height: 240px;
+  height: 30vh;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.artist-banner {
+  padding: 0 32px 24px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+}
+
+.artist-image {
+  margin-right: 24px;
+  width: 192px;
+  height: 192px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  min-width: 192px;
+  color: #7f7f7f;
+
+  /* border-radius: 50%; */
+}
+
+.artist-image img {
+  width: 100%;
+  min-width: 192px;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.artist-info {
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 1.4rem;
+}
+
+.banner-title {
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.artist-info h1 {
+  padding: 0.08em 0px;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.artist-info p {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.verified-icon {
+  display: inline-block;
+  font-size: 18px;
+  color: #42a5f5;
+  margin-right: 8px;
+}
+
+.artist-body {
+  width: 100%;
+  /* height: 70vh; */
+  padding: 21px 21px;
+}
+
+.control-icons {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.play-icon-artist {
+  width: 56px;
+  height: 56px;
+  color: #1ed760;
+  stroke: black;
+}
+
+.play-icon-artist:hover {
+  transform: scale(1.05);
+}
+.artist-follow {
+  min-width: 75px;
+  max-width: 100px;
+  height: 32px;
+  font-size: 14px;
+  border: 1px solid #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  color: #fff;
+  padding: 3px 15px;
+}
+
+.artist-follow:hover {
+  border-color: #fff;
+}
+.options-icon-artist {
+  font-size: 32px;
+  color: #b3b3b3;
+}
+
+.options-icon-artist:hover {
+  color: #fff;
+}
+.trackslist {
+  width: 100%;
+}
+
+.tracktitle {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 32px 0 16px 0;
+  color: #fff;
+}
+.trackslist table {
+  border-collapse: collapse;
+  width: 100%;
+  align-items: center;
+}
+
+.trackslist table tr {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.trackslist table tr td {
+  padding: 10px;
+  color: #b3b3b3;
+}
+
+.trackslist table tr td:first-child {
+  width: 2%;
+  font-size: 16px;
+}
+
+.trackslist table tr td:nth-child(2) {
+  width: 40%;
+}
+
+.trackslist table tr td:nth-child(3) {
+  width: 30%;
+}
+
+.track-titles-holder {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.track-item {
+  width: 100%;
+  height: 56px;
+  transition: background-color 0.2s linear;
+}
+
+.track-item:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.trackslist .track-song-image {
+  width: 40px;
+  height: 40px;
+}
+
+.trackslist .track-song-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.track-name-album {
+  padding-left: 15px;
+  letter-spacing: 0.5px;
+}
+
+.track-name {
+  font-family: "Circular Std", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.track-name-album,
+.track-date-added,
+.track-duration {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #b3b3b3;
+}
+
+.show-more-button,
+.show-less-button {
+  background: none;
+  border: none;
+  color: hsla(0, 0%, 100%, 0.7);
+  padding: 16px;
+  font-family: "Circular Std", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  transition: color 0.2s linear;
+}
+
+.show-more-button:hover,
+.show-less-button:hover {
+  color: #fff;
+}
+
+.related-artists {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-artists h2 {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+}

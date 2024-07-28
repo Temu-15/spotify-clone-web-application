@@ -1,17 +1,18 @@
-import React from 'react'
-import PlaylistItem from './PlaylistItem'
-import './categoryItem.css'
-function CategoryItem({category}) {
+import React from "react";
+import PlaylistItem from "./PlaylistItem";
+import "./categoryItem.css";
+function CategoryItem({ category }) {
+  console.log(category);
   return (
-    <div className='category-item'>
-        <h2 className="category-title">{category.category}</h2>
-        <div className='category-container'>
-            {category.playlists?.map((playlist)=>(
-                <PlaylistItem playlist={playlist} />
-            ))}
-        </div>
+    <div className="category-item">
+      <h2 className="category-title">{category.category}</h2>
+      <div className="category-container">
+        {category.playlists?.map((playlist) => (
+          <PlaylistItem playlist={playlist} />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default CategoryItem
+export default CategoryItem;

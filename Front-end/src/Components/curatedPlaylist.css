@@ -1,68 +1,88 @@
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
-.curated-playlist{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    color: #b3b3b3;
-    align-items: start;
-    overflow: hidden;
-    padding: 2rem 2rem 0 2rem;
+.curated-playlist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #b3b3b3;
+  align-items: start;
+  overflow: hidden;
+  padding: 2rem 2rem 0 2rem;
 }
 
-.curated-playlist h2{
-    font-family: 'Circular Std';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 38px;
-color: #FFFFFF;
+.curated-playlist h2 {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
 }
 
-
-.your_playlist{
-    width:100%;
-    display:grid;
-    grid-template-columns: repeat(4, 0.22fr);
-    justify-content: space-between;
-    grid-template-rows: auto;
-    row-gap:1.5rem;
-padding:1.2rem 0.8rem;    
-
+.your_playlist {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 0.22fr);
+  justify-content: space-between;
+  grid-template-rows: auto;
+  row-gap: 1.5rem;
+  padding: 1.2rem 0.8rem;
 }
 
-.playlist-container{
-    width:100%;
-    height:70px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap:1em;
-    border-radius: 4px;
-    background:#181818;
-    
+.playlist-container {
+  width: 240px;
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  border-radius: 4px;
+  background: #181818;
+  position: relative;
 }
 
-.playlist-image{
-    width:70px;
-    height:100%;
-    
+.playlist-image {
+  width: 60px;
+  height: 60px;
 }
 
-.playlist-image img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
+.playlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.playlist-name{
-    width:111px;
-    text-align: center;
-    font-family: 'Circular Std';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-color: #FFFFFF;
+.playlist-name {
+  width: 100px;
+  text-align: center;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: left;
+  /* padding: 10px; */
+}
+
+.curated-playlist-icon {
+  font-size: 40px;
+  margin-right: 15px;
+  color: #1ed760;
+  height: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.playlist-container:hover {
+  background-color: #282828;
+  cursor: pointer;
+}
+
+.playlist-container:hover .curated-playlist-icon {
+  height: 48px;
+}
+
+.curated-playlist-icon:hover {
+  transform: scale(1.05);
 }
